@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #FFFFFF; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #F5F7FA; font-family: Arial, sans-serif;
+  display: flex; flex-direction: column;
+}
+.header {
+  padding: 18pt 40pt 10pt 40pt;
+}
+.title {
+  color: #0A2E4D; font-size: 28pt; font-weight: bold;
+  font-family: 'Trebuchet MS', Arial, sans-serif; margin: 0;
+}
+.subtitle {
+  color: #1E293B; font-size: 12pt; margin: 4pt 0 0 0;
+  opacity: 0.7;
+}
+.content {
+  padding: 0 40pt;
+  display: flex; flex-direction: column; gap: 8pt;
+}
+.card {
+  background: #FFFFFF;
+  border-radius: 6pt;
+  padding: 12pt 16pt;
+  display: flex; justify-content: space-between; align-items: center;
+  box-shadow: 0 2pt 6pt rgba(0,0,0,0.08);
+  border-left: 5pt solid #00A8E8;
+}
+.card-left {
+  display: flex; flex-direction: column;
+}
+.card-number {
+  color: #00A8E8; font-size: 22pt; font-weight: bold; margin: 0;
+}
+.card-title {
+  color: #0A2E4D; font-size: 12pt; font-weight: bold; margin: 2pt 0 0 0;
+}
+.card-subtitle {
+  color: #1E293B; font-size: 9pt; margin: 1pt 0 0 0; opacity: 0.6;
+}
+.card-right {
+  text-align: right;
+}
+.card-time {
+  color: #FF6B35; font-size: 12pt; font-weight: bold; margin: 0;
+}
+.card-time-label {
+  color: #1E293B; font-size: 8pt; margin: 1pt 0 0 0; opacity: 0.6;
+}
+.summary-box {
+  margin: 12pt 40pt 40pt 40pt;
+  background: #0A2E4D;
+  border-radius: 6pt;
+  padding: 12pt 18pt;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.summary-main {
+  color: #FFFFFF; font-size: 14pt; font-weight: bold; margin: 0;
+}
+.summary-sub {
+  color: #FFFFFF; font-size: 11pt; margin: 0; opacity: 0.8;
+}
+</style>
+</head>
+<body>
+<div class="header">
+  <h1 class="title">The Cost of Manual Configuration</h1>
+  <p class="subtitle">Last Year's Configuration Tickets</p>
+</div>
+
+<div class="content">
+  <div class="card">
+    <div class="card-left">
+      <p class="card-number">~600</p>
+      <p class="card-title">Storage Account Management</p>
+      <p class="card-subtitle">Whitelisting, credentials, access</p>
+    </div>
+    <div class="card-right">
+      <p class="card-time">3 days</p>
+      <p class="card-time-label">avg lead time</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-left">
+      <p class="card-number">~450</p>
+      <p class="card-title">IP Whitelisting</p>
+      <p class="card-subtitle">Network access configuration</p>
+    </div>
+    <div class="card-right">
+      <p class="card-time">2 days</p>
+      <p class="card-time-label">avg lead time</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-left">
+      <p class="card-number">~100</p>
+      <p class="card-title">Service Principal Rotation</p>
+      <p class="card-subtitle">Manual credential rotation</p>
+    </div>
+    <div class="card-right">
+      <p class="card-time">On request</p>
+      <p class="card-time-label">manual</p>
+    </div>
+  </div>
+</div>
+
+<div class="summary-box">
+  <p class="summary-main">~1,150 tickets/year for simple configuration</p>
+  <p class="summary-sub">This doesn't scale as we grow</p>
+</div>
+</body>
+</html>

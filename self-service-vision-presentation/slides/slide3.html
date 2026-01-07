@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #FFFFFF; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #F5F7FA; font-family: Arial, sans-serif;
+  display: flex; flex-direction: column;
+}
+.header {
+  padding: 16pt 40pt 8pt 40pt;
+}
+.title {
+  color: #0A2E4D; font-size: 26pt; font-weight: bold;
+  font-family: 'Trebuchet MS', Arial, sans-serif; margin: 0;
+}
+.subtitle {
+  color: #1E293B; font-size: 11pt; margin: 4pt 0 0 0; opacity: 0.7;
+}
+.examples {
+  padding: 0 40pt;
+  display: flex; flex-direction: column; gap: 8pt;
+}
+.example {
+  background: #FFFFFF;
+  border-radius: 6pt;
+  padding: 10pt 14pt;
+  box-shadow: 0 2pt 6pt rgba(0,0,0,0.06);
+  display: flex; gap: 12pt; align-items: flex-start;
+}
+.example-icon {
+  width: 28pt; height: 28pt; flex-shrink: 0;
+}
+.example-content {
+  flex: 1;
+}
+.example-company {
+  color: #0A2E4D; font-size: 12pt; font-weight: bold; margin: 0;
+}
+.example-desc {
+  color: #1E293B; font-size: 10pt; margin: 2pt 0 0 0;
+}
+.example-proof {
+  font-size: 9pt; margin: 3pt 0 0 0; font-style: italic;
+}
+.proof-blue { color: #00A8E8; }
+.proof-orange { color: #FF6B35; }
+.insight-box {
+  margin: 10pt 40pt 40pt 40pt;
+  background: #FFFFFF;
+  border-radius: 6pt;
+  padding: 10pt 14pt;
+  border-left: 5pt solid #FF6B35;
+  box-shadow: 0 2pt 6pt rgba(0,0,0,0.06);
+}
+.insight-main {
+  color: #0A2E4D; font-size: 12pt; font-weight: bold; margin: 0;
+}
+.insight-sub {
+  color: #1E293B; font-size: 10pt; margin: 4pt 0 0 0;
+}
+</style>
+</head>
+<body>
+<div class="header">
+  <h1 class="title">This Is Real Demand</h1>
+  <p class="subtitle">Customers are asking for this today</p>
+</div>
+
+<div class="examples">
+  <div class="example">
+    <img class="example-icon" src="check-blue.png">
+    <div class="example-content">
+      <p class="example-company">DM</p>
+      <p class="example-desc">Built their own integrations independently without RELEX TC involvement</p>
+      <p class="example-proof proof-blue">Proof: Customers can manage complex integrations when given the tools</p>
+    </div>
+  </div>
+
+  <div class="example">
+    <img class="example-icon" src="check-blue.png">
+    <div class="example-content">
+      <p class="example-company">ATEA</p>
+      <p class="example-desc">Explicitly requesting self-service configuration capabilities</p>
+      <p class="example-proof proof-blue">Proof: Enterprise customers expect modern self-service experiences</p>
+    </div>
+  </div>
+
+  <div class="example">
+    <img class="example-icon" src="arrow-orange.png">
+    <div class="example-content">
+      <p class="example-company">George's P and P Team</p>
+      <p class="example-desc">Building self-service exports right now - same pattern emerging internally</p>
+      <p class="example-proof proof-orange">Proof: Need is urgent - teams building workarounds without central coordination</p>
+    </div>
+  </div>
+</div>
+
+<div class="insight-box">
+  <p class="insight-main">The question isn't "if" - it's "when" and "how"</p>
+  <p class="insight-sub">We can lead with a unified platform, or watch teams build fragmented solutions</p>
+</div>
+</body>
+</html>

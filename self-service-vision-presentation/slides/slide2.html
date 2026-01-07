@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #FFFFFF; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #F5F7FA; font-family: Arial, sans-serif;
+  display: flex; flex-direction: column;
+}
+.header {
+  padding: 20pt 40pt 12pt 40pt;
+}
+.title {
+  color: #0A2E4D; font-size: 28pt; font-weight: bold;
+  font-family: 'Trebuchet MS', Arial, sans-serif; margin: 0;
+}
+.subtitle {
+  color: #1E293B; font-size: 12pt; margin: 6pt 0 0 0; opacity: 0.7;
+}
+.phases {
+  padding: 0 40pt;
+  display: flex; flex-direction: column; gap: 10pt;
+}
+.phase {
+  background: #FFFFFF;
+  border-radius: 6pt;
+  padding: 12pt 16pt;
+  box-shadow: 0 2pt 6pt rgba(0,0,0,0.06);
+}
+.phase-highlighted {
+  background: #E8F4FD;
+  border: 2pt solid #00A8E8;
+}
+.phase-header {
+  display: flex; align-items: center; gap: 10pt; margin-bottom: 6pt;
+}
+.phase-badge {
+  background: #1E293B; color: #FFFFFF;
+  font-size: 9pt; font-weight: bold; padding: 3pt 8pt;
+  border-radius: 3pt;
+}
+.phase-badge-active {
+  background: #00A8E8;
+}
+.prototype-badge {
+  background: #FF6B35; color: #FFFFFF;
+  font-size: 8pt; font-weight: bold; padding: 2pt 6pt;
+  border-radius: 10pt;
+}
+.phase-title {
+  color: #0A2E4D; font-size: 14pt; font-weight: bold; margin: 0;
+}
+.phase-status {
+  color: #1E293B; font-size: 10pt; margin: 0; opacity: 0.6;
+}
+.phase-desc {
+  color: #1E293B; font-size: 10pt; margin: 4pt 0 0 0;
+}
+.metrics-row {
+  display: flex; gap: 16pt; margin: 6pt 0;
+}
+.metric {
+  color: #1E293B; font-size: 9pt; margin: 0;
+}
+.metric-highlight {
+  color: #00A8E8; font-weight: bold;
+}
+.phase-cta {
+  color: #FF6B35; font-size: 10pt; font-weight: bold; margin: 6pt 0 0 0;
+}
+</style>
+</head>
+<body>
+<div class="header">
+  <h1 class="title">The Self-Service Vision</h1>
+  <p class="subtitle">Three phases from tickets to autonomy</p>
+</div>
+
+<div class="phases">
+  <div class="phase">
+    <div class="phase-header">
+      <div class="phase-badge"><p style="margin:0;color:white;font-size:9pt;">PHASE 1</p></div>
+      <p class="phase-title">Auto-Provisioning</p>
+    </div>
+    <p class="phase-status">In Progress - Kasa's team</p>
+    <p class="phase-desc">Salesforce -> Automated setup -> Portal access</p>
+  </div>
+
+  <div class="phase phase-highlighted">
+    <div class="phase-header">
+      <div class="phase-badge phase-badge-active"><p style="margin:0;color:white;font-size:9pt;">PHASE 2</p></div>
+      <p class="phase-title">Customer Self-Configuration</p>
+      <div class="prototype-badge"><p style="margin:0;color:white;font-size:8pt;">PROTOTYPE READY</p></div>
+    </div>
+    <p class="phase-status">Demo available - 6-12 month timeline</p>
+    <div class="metrics-row">
+      <p class="metric"><span class="metric-highlight">Storage accounts:</span> 3 days -> 2 min</p>
+      <p class="metric"><span class="metric-highlight">IP whitelisting:</span> 2 days -> 30 sec</p>
+      <p class="metric"><span class="metric-highlight">SP credentials:</span> On-demand</p>
+    </div>
+    <p class="phase-desc">+ API clients, webhooks, SSO configuration</p>
+    <p class="phase-cta">-> Let me show you this working... [DEMO]</p>
+  </div>
+
+  <div class="phase">
+    <div class="phase-header">
+      <div class="phase-badge"><p style="margin:0;color:white;font-size:9pt;">PHASE 3</p></div>
+      <p class="phase-title">Build Integrations</p>
+    </div>
+    <p class="phase-status">Future vision - 12-24 months</p>
+    <p class="phase-desc">Customer creates transformations - Low-code interface - DM already does this</p>
+    <p class="phase-cta">-> Here's where we're heading... [DEMO]</p>
+  </div>
+</div>
+</body>
+</html>

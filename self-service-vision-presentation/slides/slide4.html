@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #FFFFFF; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #F5F7FA; font-family: Arial, sans-serif;
+  display: flex; flex-direction: column;
+}
+.header {
+  padding: 14pt 40pt 8pt 40pt;
+}
+.title {
+  color: #0A2E4D; font-size: 24pt; font-weight: bold;
+  font-family: 'Trebuchet MS', Arial, sans-serif; margin: 0;
+}
+.subtitle {
+  color: #1E293B; font-size: 10pt; margin: 4pt 0 0 0; opacity: 0.7;
+}
+.architecture {
+  padding: 0 40pt;
+  display: flex; flex-direction: column; align-items: center; gap: 8pt;
+}
+.layer-label {
+  color: #1E293B; font-size: 8pt; font-weight: bold;
+  text-transform: uppercase; letter-spacing: 1pt; margin: 0;
+}
+.top-layer {
+  width: 100%;
+  background: #0A2E4D;
+  border-radius: 6pt;
+  padding: 12pt 20pt;
+  display: flex; justify-content: center; align-items: center; gap: 16pt;
+}
+.portal-box {
+  background: #FFFFFF;
+  border-radius: 5pt;
+  padding: 8pt 18pt;
+  text-align: center;
+  min-width: 150pt;
+}
+.portal-title {
+  color: #0A2E4D; font-size: 11pt; font-weight: bold; margin: 0;
+}
+.portal-subtitle {
+  color: #1E293B; font-size: 9pt; margin: 2pt 0 0 0;
+}
+.connector {
+  color: #FFFFFF; font-size: 16pt; font-weight: bold;
+}
+.arrow-down {
+  width: 32pt; height: 20pt;
+}
+.bottom-layer {
+  width: 100%;
+  background: #FFFFFF;
+  border: 2pt solid #00A8E8;
+  border-radius: 6pt;
+  padding: 10pt 18pt;
+}
+.platform-row {
+  display: flex; justify-content: center; align-items: center; gap: 10pt;
+  margin-bottom: 6pt;
+}
+.platform-box {
+  background: #F5F7FA;
+  border-radius: 5pt;
+  padding: 8pt 14pt;
+  text-align: center;
+}
+.platform-title {
+  color: #0A2E4D; font-size: 10pt; font-weight: bold; margin: 0;
+}
+.platform-connector {
+  color: #00A8E8; font-size: 12pt; font-weight: bold;
+}
+.monitoring-row {
+  display: flex; justify-content: center; margin-top: 6pt;
+}
+.monitoring-box {
+  background: #E8F4FD;
+  border-radius: 5pt;
+  padding: 6pt 14pt;
+}
+.monitoring-title {
+  color: #0A2E4D; font-size: 10pt; font-weight: bold; margin: 0;
+}
+.pills-row {
+  display: flex; justify-content: center; gap: 8pt; margin-top: 8pt;
+}
+.pill {
+  background: #FF6B35; color: #FFFFFF;
+  font-size: 8pt; font-weight: bold; padding: 3pt 8pt;
+  border-radius: 10pt;
+}
+.footer-text {
+  color: #1E293B; font-size: 9pt; text-align: center;
+  margin: 8pt 40pt 40pt 40pt; opacity: 0.7;
+}
+</style>
+</head>
+<body>
+<div class="header">
+  <h1 class="title">How The Pieces Fit Together</h1>
+  <p class="subtitle">Unified customer experience across tools</p>
+</div>
+
+<div class="architecture">
+  <p class="layer-label">CUSTOMER EXPERIENCE LAYER</p>
+  <div class="top-layer">
+    <div class="portal-box">
+      <p class="portal-title">Self-Service Portal</p>
+      <p class="portal-subtitle">Configuration and Access</p>
+    </div>
+    <p class="connector" style="margin:0;color:white;">&#8596;</p>
+    <div class="portal-box">
+      <p class="portal-title">Connect 3000</p>
+      <p class="portal-subtitle">Integration Building</p>
+    </div>
+  </div>
+
+  <img class="arrow-down" src="arrow-down.png">
+
+  <p class="layer-label">INTEGRATION PLATFORM</p>
+  <div class="bottom-layer">
+    <div class="platform-row">
+      <div class="platform-box">
+        <p class="platform-title">Developer Portal</p>
+      </div>
+      <p class="platform-connector" style="margin:0;">&#8596;</p>
+      <div class="platform-box">
+        <p class="platform-title">Data Product Designer</p>
+      </div>
+      <p class="platform-connector" style="margin:0;">&#8596;</p>
+      <div class="platform-box">
+        <p class="platform-title">API Management</p>
+      </div>
+    </div>
+    <div class="monitoring-row">
+      <div class="monitoring-box">
+        <p class="monitoring-title">Monitoring API</p>
+      </div>
+    </div>
+    <div class="pills-row">
+      <div class="pill"><p style="margin:0;color:white;font-size:8pt;">SAP Connector</p></div>
+      <div class="pill"><p style="margin:0;color:white;font-size:8pt;">Batch Files</p></div>
+      <div class="pill"><p style="margin:0;color:white;font-size:8pt;">Data API</p></div>
+    </div>
+  </div>
+</div>
+
+<p class="footer-text">All components work together to provide seamless integration experience</p>
+</body>
+</html>
