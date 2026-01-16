@@ -2,11 +2,13 @@
 
 ## The problem
 
-AI makes it possible to contribute to repositories you don't know. A developer can now add features or fix bugs in services they've never touched before. This creates two problems.
+AI makes it possible to contribute to repositories you don't know. A developer can now add features or fix bugs in services they've never touched before. This creates three problems.
 
-First, we block contributions with complexity arguments. When someone asks to contribute to the data product designer, the response is "it's too complicated, not ready for contribution." This pattern repeats across repositories. We tell people to wait months instead of enabling them to fix what they care about.
+First, we don't recognize the potential. Teams haven't internalized that AI removes the primary barrier to cross-team contributions, which was learning an unfamiliar codebase.
 
-Second, we have no guidelines for AI-assisted contributions. Someone can submit 5,000 lines of AI-generated code that becomes impossible to review. We need contribution standards before this becomes common practice.
+Second, we lack standards to do it. When someone could submit 5,000 lines of AI-generated code, we have no guidelines for what makes an acceptable AI-assisted contribution.
+
+Third, in cases where this might make sense, team responses have been lukewarm at best. The pattern is resistance rather than enablement.
 
 ## The opportunity
 
