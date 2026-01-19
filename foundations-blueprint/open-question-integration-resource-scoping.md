@@ -1,8 +1,9 @@
 # Open Question: Integration Resource Scoping
 
-**Status:** Under discussion  
-**Raised:** 2026-01-13  
-**Follow-up:** Meeting to be scheduled by Mikko Minkkinen  
+**Status:** RESOLVED - Adopted tenant qualifier approach
+**Raised:** 2026-01-13
+**Resolved:** 2026-01-19 (meeting with key stakeholders)
+**Solution:** See `tenant-level-qualifiers-proposal.md`
 **Key stakeholders:** Mikko Kasanen, Olli Niskanen, Mikko Minkkinen, Joonas Kröger, Matias Käkelä
 
 ## The Conflict
@@ -65,24 +66,51 @@ Keep tenant as the integration boundary, but add qualifiers at the tenant level 
 - `customer-eu-uat-dev` (tenant for development)
 - `customer-eu-uat` (standard tenant)
 
-**Diagram (Olli's description):**
+**Diagram (Olli's diagram from Slack, with corrected labels):**
+
 ```
-Customer
-├── customer-eu-prod
-│   ├── plan
-│   ├── store-pl
-│   ├── store-de
-│   └── space-de
-│
-├── customer-eu-uat (for UAT testing)
-│   ├── plan
-│   └── store
-│
-└── customer-eu-dev (or customer-eu-uat-dev)
-    └── plan
+┌─────────────────────────────────────────────────────────────────────────────────────────────────┐
+│ customer                                                                                        │
+│                                                                                                 │
+│  ┌────────────────────────────────┐    ┌────────────────────────────────────────────────────┐  │
+│  │ us                             │    │ eu                                                 │  │
+│  │                                │    │                                                    │  │
+│  │  ╔═════════╗  ╔═════════╗     │    │  ╔═════════════╗  ╔═════════════╗  ╔═════════════╗ │  │
+│  │  ║  prod   ║  ║  uat    ║     │    │  ║    prod     ║  ║     uat     ║  ║  uat-dev    ║ │  │
+│  │  ║ ─────── ║  ║ ─────── ║     │    │  ║  ─────────  ║  ║  ─────────  ║  ║  ─────────  ║ │  │
+│  │  ║  plan   ║  ║  plan   ║     │    │  ║ plan    sp- ║  ║ plan    sp- ║  ║ plan    sp- ║ │  │
+│  │  ║  make   ║  ║  make   ║     │    │  ║        de   ║  ║        de   ║  ║        de   ║ │  │
+│  │  ║  space  ║  ║  space  ║     │    │  ║ make    sp- ║  ║ make    sp- ║  ║ make    sp- ║ │  │
+│  │  ║  mobile ║  ║  mobile ║     │    │  ║        fr   ║  ║        fr   ║  ║        fr   ║ │  │
+│  │  ║  conn.  ║  ║  conn.  ║     │    │  ║ mobile      ║  ║ mobile      ║  ║ mobile      ║ │  │
+│  │  ║         ║  ║         ║     │    │  ║ connect     ║  ║ connect     ║  ║ connect     ║ │  │
+│  │  ╚═════════╝  ╚═════════╝     │    │  ╚═════════════╝  ╚═════════════╝  ╚═════════════╝ │  │
+│  │                                │    │                                                    │  │
+│  └────────────────────────────────┘    └────────────────────────────────────────────────────┘  │
+│                                                                                                 │
+└─────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+Legend:
+  ╔═══╗ = Tenant boundary (bold green in original) - integration resources shared within
+  ┌───┐ = Region/customer boundary (dotted in original) - no data sharing across
+  
+Tenant names:
+  - customer-us-prod, customer-us-uat
+  - customer-eu-prod, customer-eu-uat, customer-eu-uat-dev (note: "dev" is a tenant qualifier, not env-type)
 ```
 
-The tenant boundary (bold line) is where data moves freely—shared ABS accounts, Kafka topics, Snowflake, etc. `customer-eu-prod-space-de` can read nightly exports from `customer-eu-prod-plan`, but nothing crosses to `customer-eu-uat` or `customer-eu-dev`.
+**Key insight from diagram:**
+- US region has 2 tenants: `customer-us-prod`, `customer-us-uat`
+- EU region has 3 tenants: `customer-eu-prod`, `customer-eu-uat`, `customer-eu-uat-dev`
+- The third EU tenant uses a **tenant-level qualifier** (`dev`) to create isolation within the `uat` env-type
+- Space has country qualifiers (`space-de`, `space-fr`) as **deployment qualifiers** within each tenant
+- All deployments within a tenant (bold green box) share integration resources
+
+**Important constraint:** The blueprint standardizes on 4 env-types: `dev`, `qa`, `uat`, `prod`. We cannot add new env-types. Therefore, Olli's "dev" box must be modeled as a **tenant-level qualifier** on `uat`, not a separate env-type:
+- ✅ `customer-eu-uat-dev` (tenant qualifier on uat env-type)
+- ❌ `customer-eu-dev` (would require "dev" as a 5th env-type, but `dev` already exists with different meaning)
+
+The tenant boundary (bold green line) is where data moves freely—shared ABS accounts, Kafka topics, Snowflake, etc. `customer-eu-prod-space-de` can read nightly exports from `customer-eu-prod-plan`, but nothing crosses to `customer-eu-uat` or `customer-eu-dev`.
 
 **Pros:**
 - Keeps tenant as integration boundary (no model change)
@@ -102,22 +130,44 @@ The tenant boundary (bold line) is where data moves freely—shared ABS accounts
 
 ## Open Questions
 
-1. **Is two-level qualifiers the right model?** Olli proposes `{customer}-{region}-{env-type}-{qualifier}-{system}-{qualifier}`. The current blueprint only has deployment-level qualifiers.
+1. **Is two-level qualifiers the right model?** Olli proposes `{customer}-{region}-{env-type}-{tenant-qualifier}-{system}-{deployment-qualifier}`. The current blueprint only has deployment-level qualifiers.
 
 2. **What automation rules govern tenant creation?** If qualified tenants are common (not exceptions), how does automation decide what to provision?
 
-3. **Should "dev" be a separate env-type or a qualifier?** Olli suggested `customer-eu-uat-dev` (qualifier) or potentially `customer-eu-dev` (env-type). Different modeling has different implications.
+3. ~~**Should "dev" be a separate env-type or a qualifier?**~~ **RESOLVED:** Must be a tenant-level qualifier. The blueprint standardizes on 4 env-types (`dev`, `qa`, `uat`, `prod`), and `dev` already has a defined meaning (daily development with synthetic data). Olli's "dev" isolation need within UAT must be `customer-eu-uat-dev` (qualifier), not `customer-eu-dev` (env-type).
 
 4. **What exactly remains at tenant level?** If Proposal A is adopted, tenant becomes metadata (same customer, region, env type) but not an operational boundary. Is "tenant" still the right name?
 
 5. **How do we handle the transition?** Existing topic naming uses tenant UUIDs. Any change affects existing integrations.
 
+6. **Naming collision risk:** If `dev` is both an env-type AND a valid tenant qualifier, we could have:
+   - `customer-eu-dev` (env-type: development environment)
+   - `customer-eu-uat-dev` (qualifier: UAT environment for development purposes)
+   
+   These are semantically different. Is this confusing? Should tenant qualifiers have a restricted vocabulary that doesn't overlap with env-types?
+
+## Resolution
+
+Meeting on 2026-01-19 adopted **Proposal B: Tenant-Level Qualifiers** (Olli's proposal).
+
+**Key decisions:**
+
+1. **Integration resources remain at tenant level** - deployments within a tenant share Kafka topics and blob storage
+2. **Tenant qualifiers create isolation** - `circlek-eu-uat` and `circlek-eu-uat-dev` are separate tenants with separate integration resources
+3. **Deployment qualifiers don't split tenants** - `circlek-eu-prod-store-pl` and `circlek-eu-prod-store-es` share resources within the same tenant
+4. **Default automation** - Creates `prod` and `uat` base tenants automatically; qualified tenants created manually via CMT
+5. **Cross-tenant data flow** - Generally forbidden, but documented exceptions allowed (prod→uat refresh, etc.)
+
+Full proposal: `tenant-level-qualifiers-proposal.md`
+
 ## Related Documents
 
 - [Foundations Blueprint DRAFT](https://relexsolutions.atlassian.net/wiki/spaces/DC/pages/5709890209) - Current model
-- `integration-resources-deployment-scoped.md` - Proposal A detailed writeup
+- `tenant-level-qualifiers-proposal.md` - **ADOPTED SOLUTION**
+- `integration-resources-deployment-scoped.md` - Proposal A (NOT ADOPTED)
 - `unified-terminology-hierarchy-model.md` - Summary of the hierarchy model
 
-## Slack Thread Reference
+## References
 
-Architecture Board channel, 2026-01-13, starting with Matias's message about the meeting with Mikko Minkkinen.
+- Architecture Board channel (Slack), 2026-01-13
+- Meeting transcript, 2026-01-19
