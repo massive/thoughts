@@ -2,272 +2,137 @@
 ## 40th Birthday Celebration
 
 **Travelers**: Matias & Wife
-**Dates**: Friday January 24 (arrival 12:00) - Sunday January 26, 2026 (departure 16:00)
+**Accommodation**: The Bank Hotel, Arsenalsgatan (central location between Gamla Stan and shopping districts)
+**Dates**: Friday January 24 - Sunday January 26, 2026
 **Flights**: AY807 (outbound), AY814 (return) via Finnair
 
-## Date clarification note
+## Trip approach
 
-There appears to be some confusion in the restaurant booking confirmations. January 24, 2026 is actually a Friday, not Saturday. I've structured this plan assuming:
-- Friday Jan 24: Arrival + Chez Jolie dinner
-- Saturday Jan 25: Full day + Aira dinner
-- Sunday Jan 26: Morning activities + departure
-
-If the dates in your bookings are different, adjust accordingly.
+This is a celebration weekend, not a checklist marathon. The plan has structure but leaves room for discovery. Late starts (10-11am), walking in the cold (you're Finns), authentic local food over trendy spots, and two special dinners. One museum, shopping for Nordic fashion and kids' gifts, neighborhood exploration.
 
 ## Confirmed reservations
 
-**Friday evening - Chez Jolie**
-- Time: 20:45 (local Stockholm time UTC+2)
+**Friday January 24 - Chez Jolie**
+- Time: 20:45
 - Date: January 24, 2026
 
-**Saturday evening - Aira** (2-star Michelin)
+**Saturday January 25 - Aira** (2-star Michelin)
 - Time: 19:00
-- Date: January 25, 2026
 - Booking ID: 59722588
 - Party size: 2 people
-- Important: 5-day cancellation policy, dietary restrictions must be communicated at least 5 days prior
-- Note: Cannot accommodate vegan diets or menus free of milk protein or egg
+- Cancellation policy: 5 days prior, or full menu price charged
+- Dietary restrictions: Must communicate 5+ days before (cannot accommodate vegan or milk protein/egg-free)
 
 ## Weather and packing
 
-**Expected conditions**
-- Temperature: -5°C to 2°C (22°F to 35°F)
-- Snow likely (20+ snowy days expected in January)
-- Daylight: Only 7 hours (roughly 9am-4pm)
-- All indoor spaces are heavily heated
+**Expected**: -5°C to 2°C, snow likely, 7 hours of daylight (9am-4pm)
 
-**What to pack**
-- Warmest winter coat
-- Thermal base layers
-- Hat, scarf, gloves (essential)
-- Waterproof boots with good traction for ice
-- Multiple layers for indoor/outdoor transitions
-- Sturdy walking boots
+**Pack**: Winter coat, thermal layers, hat, scarf, gloves, waterproof boots with traction. Multiple layers for moving between cold streets and overheated indoor spaces.
 
-## Friday January 24 - Arrival day
+## Friday January 24 - Arrival
 
-### Afternoon (12:00-18:00)
+**12:00** - Land at Arlanda (AY807)
 
-**Airport to city transfer**
+**13:00** - Arlanda Express to Central Station
+- 18 minutes, 340 SEK per person
+- Every 15 minutes
+- Speed and comfort for a celebration arrival
 
-Two recommended options:
+**13:30** - Check in at The Bank Hotel, drop bags, freshen up
 
-1. **Arlanda Express Train** (fastest, premium experience)
-   - Duration: 18 minutes to Stockholm Central Station
-   - Cost: 340 SEK per person one-way
-   - Frequency: Every 15 minutes
-   - Why: Speed and comfort for a birthday celebration arrival
+**14:30-18:00** - Södermalm exploration
+- Metro to Södermalm
+- SoFo district (trendy boutiques, vintage shops, cafes)
+- Fjällgatan viewpoint for city views
+- Coffee break when you need it
+- More local and less touristy than Gamla Stan
 
-2. **Flygbussarna Airport Bus** (best value)
-   - Duration: 35-45 minutes to City Terminal
-   - Cost: 129 SEK one-way (cheaper if booked online in advance)
-   - Frequency: Every 10-30 minutes
-   - Why: Good balance of time and price
+**18:00** - Back to hotel, change for dinner
 
-**Recommendation**: Take Arlanda Express for the arrival (special occasion), consider Flygbussarna for Sunday departure.
+**20:45** - Dinner at Chez Jolie
 
-**Hotel check-in and freshen up** (13:00-15:00)
+**22:00+** - Post-dinner walk or back to hotel
 
-**Afternoon activity options** (15:00-18:00)
+## Saturday January 25 - Full day
 
-Option A: **ICEBAR Stockholm by ICEHOTEL** (unique birthday experience)
-- World's first permanent ice bar
-- Temperature: -5°C inside
-- 2025-2026 theme: "Archipelago"
-- Includes warm cape, gloves, and cocktail in ice glass
-- Duration: ~40 minutes
-- Location: Next to Central Station
-- Why: Fun, memorable way to kick off the birthday weekend
+**10:00** - Late breakfast at hotel or nearby cafe
 
-Option B: **Early evening walk through Gamla Stan**
-- Explore the medieval Old Town
-- See Royal Palace, narrow cobblestone streets
-- Visit Mårten Trotzigs Gränd (Stockholm's narrowest street, 90cm wide)
-- Find cozy cafes for afternoon fika
-- Beautiful with winter lighting
+**11:30-14:30** - Historical Museum
+- World's largest Viking exhibition
+- 2,500 original artifacts with VR and interactive stations
+- Real Viking swords, jewelry, runestones
+- Take your time, substantial collection
+- Located on Narvavägen (metro or bus from hotel)
 
-### Evening (18:00-23:00)
+**14:30-18:00** - Shopping
+From the museum, head to city center shopping areas:
+- **NK Department Store** - Swedish department store, good for kids' gifts and Nordic brands
+- **Drottninggatan** - Main pedestrian street with Nordic fashion brands
+- **Biblioteksgatan** - Upscale fashion boutiques
+- **Åhléns** - Another department store option
 
-**Pre-dinner** (18:00-20:00)
-- Light pre-dinner drink if hungry before 20:45 reservation
-- Continue Gamla Stan exploration if time
+Target: Nordic fashion for you both, kids' gifts to bring home.
 
-**Dinner at Chez Jolie** (20:45)
-- Reservation confirmed
-- Arrive 10-15 minutes early
+**18:00** - Back to hotel, rest and change
 
-**Post-dinner walk** (22:00+)
-- Gamla Stan is beautifully lit at night
-- Quiet, romantic atmosphere
-- Return to hotel
+**19:00** - Aira (birthday celebration dinner)
+- Expect 2.5-3 hours
+- This is the splurge moment
 
-## Saturday January 25 - Full day exploration
+**22:00+** - One drink somewhere or straight back to hotel
 
-### Morning (9:00-12:00)
+## Sunday January 26 - Departure
 
-**Vasa Museum** (arrive at 10:00 opening)
-- Stockholm's most-visited attraction
-- Incredibly well-preserved 17th-century battleship that sank in 1628
-- 95% original artifact with stunning craftsmanship
-- Hours: 10:00-17:00 (open until 20:00 on Wednesdays)
-- Duration: 1.5-2 hours
-- Why arrive early: Beat the crowds
-- Location: Djurgården island
+**9:00** - Breakfast at The Bank Hotel
 
-**Brunch/lunch on Djurgården** (12:00-13:30)
-- Several cafes and restaurants near the museums
-- Alternatively, return to city center for lunch
+**10:00-11:30** - Pack and prepare
 
-### Afternoon (13:30-18:00)
+**12:00** - Checkout, leave luggage with hotel
 
-**Fotografiska** (14:00-17:00)
-- Contemporary photography museum
-- Current exhibition: Anniversary show (through March 1, 2026)
-- Hours: 10:00-23:00 daily
-- Special feature: Rooftop cafe with spectacular panoramic views
-- Perfect for afternoon coffee with a view
-- Duration: 2-3 hours
+**12:00-13:15** - Gamla Stan walk
+- Quiet Sunday morning streets
+- Medieval lanes and waterfront
+- Royal Palace exterior
+- Mårten Trotzigs Gränd (narrowest street, 90cm)
+- Bakery stop for kanelbullar
+- Many shops have reduced Sunday hours
 
-**Alternative afternoon option: Södermalm walking tour**
-- Trendy, artistic neighborhood
-- Key stops:
-  - Götgatan (historic shopping street from 1640s)
-  - Mosebacke Torg square
-  - Katarina Church
-  - Mäster Mikaels Gata (one of Stockholm's best-preserved old streets)
-  - Fjällgatan viewpoint (stunning views of Gamla Stan)
-  - SoFo district (trendy cafes, vintage shops)
-- Why: Fewer crowds than Gamla Stan, local atmosphere, beautiful views
+**13:15** - Pick up bags from hotel, walk to Central Station
 
-### Evening (18:00-23:00)
+**13:30** - Arlanda Express departs (18 minutes to airport)
 
-**Pre-dinner** (18:00-18:45)
-- Return to hotel to freshen up and change
-- Light walk to restaurant
+**14:30** - Arrive at Arlanda
 
-**Birthday dinner at Aira** (19:00)
-- 2-star Michelin restaurant
-- Seasonal menu transforming humble ingredients into edible art
-- Booking ID: 59722588
-- Special occasion: Request birthday acknowledgment when you arrive
-- Duration: Expect 2.5-3 hours for full tasting menu
+**16:00** - Depart Stockholm (AY814)
 
-**Post-dinner** (22:00+)
-- Celebratory drink at a rooftop bar (if not too cold):
-  - Tak Rooftop Bar (13th floor, exceptional cocktails)
-  - Himlen (360-degree Stockholm views from Södermalm)
-  - Cadierbaren Grand Hôtel (views of water and Royal Palace)
-- Or return to hotel for a nightcap
-
-## Sunday January 26 - Departure day
-
-**Time constraint**: Need to leave for airport by 13:30-14:00 for 16:00 flight. This gives you morning until ~12:30 for activities.
-
-### Morning (7:00-12:30)
-
-**Early morning walk through Gamla Stan** (7:00-9:00)
-- Streets are quiet on Sunday mornings
-- Perfect lighting for photos
-- Walk along water's edge
-- Find a bakery for coffee and kanelbullar (Swedish cinnamon buns)
-
-**Brunch** (9:00-11:00)
-
-Recommended spots (no reservations needed, open early):
-
-1. **Pom & Flora** - Three locations, cozy all-day breakfast
-2. **The Greasy Spoon** - Södermalm location, avocado eggs benedict, French toast
-3. **Café Pascal** - Excellent fika spot with ham and cheese croissants
-4. **Sthlm Brunch Club** - Vasastan's best brunch (arrive early to avoid queues)
-
-**Optional quick activity** (11:00-12:30)
-- Last stroll through favorite neighborhood
-- Pick up any souvenirs
-- Or simply enjoy leisurely brunch without rushing
-
-### Departure (13:30-16:00)
-
-**Leave hotel by 13:30-14:00**
-- Take Flygbussarna (35-45 min) or Arlanda Express (18 min)
-- Arrive at ARN by 14:30-14:45 for 16:00 flight
-- Allow buffer time for check-in and security
-
-**Flight**: AY814 departure 16:00
-
-## Backup and alternative ideas
-
-### If weather is particularly bad
-
-**Indoor alternatives**:
-- Moderna Museet ("Late Picasso" exhibition through April 5)
-- Historical Museum (world's largest Viking exhibition)
-- Museum of the Future (VR experiences, space exhibition)
-- Östermalms Saluhall (gourmet food hall)
-- Shopping in covered areas
-
-### Romantic additions
-
-**Spa and sauna experiences**:
-- Centralbadet (art nouveau building with tiled saunas, city center)
-- Hellasgården (traditional wooden saunas with lake views)
-- Yasuragi (Japanese spa)
-
-**Scenic experiences**:
-- Monteliusvägen (quarter-mile walking path with magnificent views)
-- Dinner cruise (three-course Swedish meal while cruising past illuminated landmarks)
-
-### Special exhibitions and events (January 24-26)
-
-**Saturday January 25**:
-- Film Screening & Masterclass at Fotografiska (15:00-17:30)
-
-**Nearby dates**:
-- Winter Run Stockholm (January 31) if you're interested in returning
-
-## Budget estimate
+## Budget
 
 **Transportation**:
-- Arlanda Express: 340 SEK each way per person (or 129 SEK for bus)
-- Local transport: ~100-200 SEK per person for weekend
+- Arlanda Express: 680 SEK per person round trip
+- Local transport: ~100-200 SEK per person
 
-**Attractions**:
-- Vasa Museum: ~200 SEK per person
-- Fotografiska: ~200-250 SEK per person
-- ICEBAR: ~200-300 SEK per person (includes drink)
+**Museum**: ~200 SEK per person (Historical Museum)
 
-**Meals**:
-- Casual breakfast/brunch: 150-300 SEK per person
-- Casual lunch: 200-400 SEK per person
-- Fine dining (Aira): 1,500-2,500 SEK per person (estimate)
-- Chez Jolie: (check their menu for pricing)
+**Meals** (excluding Chez Jolie and Aira):
+- Breakfast/brunch: 150-300 SEK per person
+- Casual meals: 200-400 SEK per person
 
-**Total estimated spend**: 4,000-7,000 SEK per person for the weekend (excluding accommodation and pre-booked dinners)
+**Shopping**: Your discretion for Nordic brands and kids' gifts
 
-## Pro tips
+## Practical notes
 
-1. **Buy Stockholm Pass if doing multiple museums** - Can save money and includes public transport
-2. **Book any additional restaurants NOW** - Weekend evenings fill up fast
-3. **Download Stockholm public transport app** - SL app for tickets and routes
-4. **Bring extra phone battery** - Cold drains batteries fast
-5. **Layer, layer, layer** - You'll be moving between -5°C outside and 25°C inside constantly
-6. **Sunset is around 15:30** - Plan scenic viewpoints for mid-afternoon
-7. **Sunday morning is magical in Gamla Stan** - Truly quiet and beautiful
+- Download SL app for Stockholm public transport tickets and routes
+- Cold drains phone batteries fast, bring extra power
+- Indoor spaces are heavily heated, layer so you can adjust
+- Sunday has reduced public transport frequency and shop hours
+- Book Arlanda Express tickets online in advance for better prices
 
-## Emergency contacts
+## Before you go
 
-- Emergency number (police, fire, ambulance): 112
-- Non-emergency police: 114 14
-- Arlanda Airport: +46 10 109 00 00
-- Finnair customer service: Check your booking confirmation
-
-## Questions to resolve before departure
-
-1. Confirm exact dates/times for Chez Jolie and Aira (there seems to be day/date mismatch in confirmations)
-2. Do you have accommodation booked? If not, book soon for late January
-3. Any dietary restrictions to communicate to Aira (must be done 5 days prior, so by January 20)
-4. Do you want to book any additional activities in advance (ICEBAR, spa, etc.)?
-5. Consider buying Arlanda Express tickets online in advance for better prices
+1. Confirm Chez Jolie and Aira reservation dates/times
+2. Communicate any dietary restrictions to Aira by January 20
+3. Verify The Bank Hotel allows luggage storage after Sunday checkout
 
 ---
 
-**This is your wife's 40th birthday celebration. Make it special, make it memorable, and don't over-schedule. Leave room for spontaneity, long dinners, and simply enjoying the beautiful winter city together.**
+This is a 40th birthday celebration. Two special dinners, one solid museum, good shopping, walking through winter Stockholm. Don't over-schedule. Leave room for long meals and discovering things you didn't plan.
