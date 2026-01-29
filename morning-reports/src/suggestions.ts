@@ -1,9 +1,15 @@
 import { query } from "@anthropic-ai/claude-agent-sdk";
 import type { Meeting } from "./calendar.js";
+import type { JiraTask } from "./jira.js";
 
 export interface MeetingSuggestions {
   meetingId: string;
   context: string;
+  suggestions: string[];
+}
+
+export interface TaskSuggestions {
+  taskKey: string;
   suggestions: string[];
 }
 
@@ -73,6 +79,71 @@ Return ONLY a valid JSON array with no additional text:
         return JSON.parse(jsonStr) as MeetingSuggestions[];
       } catch (error) {
         console.error("Failed to parse suggestions response:", error);
+        console.error("Raw response:", message.result);
+        return [];
+      }
+    }
+  }
+
+  return [];
+}
+
+export async function generateTaskSuggestions(
+  tasks: JiraTask[],
+  expertise: string
+): Promise<TaskSuggestions[]> {
+  if (tasks.length === 0) {
+    return [];
+  }
+
+  const tasksSummary = tasks
+    .map(
+      (t) =>
+        `- ${t.key}: ${t.summary} (Due: ${t.dueDate}, Status: ${t.status}, Priority: ${t.priority})${t.description ? `\n  Description: ${t.description.slice(0, 500)}` : ""}`
+    )
+    .join("\n");
+
+  for await (const message of query({
+    prompt: `You are preparing a morning briefing for a Technical Principal at RELEX.
+
+USER EXPERTISE (DO NOT suggest things they already know):
+${expertise}
+
+For each Jira task below, provide 2-3 preparation suggestions that:
+- Are specific and actionable
+- Account for the user's deep expertise in APIs, Kafka, architecture
+- Focus on HOW to approach or prepare for the task
+- Consider the due date urgency
+- Skip obvious suggestions
+
+TASKS WITH UPCOMING DEADLINES:
+${tasksSummary}
+
+Task keys for reference:
+${JSON.stringify(tasks.map((t) => t.key), null, 2)}
+
+Return ONLY a valid JSON array with no additional text:
+[
+  {
+    "taskKey": "AT-123",
+    "suggestions": ["actionable suggestion 1", "actionable suggestion 2"]
+  }
+]`,
+    options: {
+      maxTurns: 3,
+    },
+  })) {
+    if (message.type === "result" && message.subtype === "success") {
+      try {
+        const result = message.result.trim();
+        const jsonMatch = result.match(/```(?:json)?\s*([\s\S]*?)```/) || [
+          null,
+          result,
+        ];
+        const jsonStr = jsonMatch[1]?.trim() || result;
+        return JSON.parse(jsonStr) as TaskSuggestions[];
+      } catch (error) {
+        console.error("Failed to parse task suggestions response:", error);
         console.error("Raw response:", message.result);
         return [];
       }
