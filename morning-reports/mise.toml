@@ -1,0 +1,19 @@
+[tasks.install]
+description = "Install dependencies"
+run = "bun install"
+
+[tasks.dev]
+description = "Run in watch mode"
+run = "bun --watch run src/index.ts"
+
+[tasks.start]
+description = "Generate morning report"
+run = "bun run src/index.ts"
+
+[tasks.test]
+description = "Run tests"
+run = "bun test"
+
+[tasks.clean]
+description = "Remove build artifacts"
+run = "rm -rf node_modules reports/*.md"
