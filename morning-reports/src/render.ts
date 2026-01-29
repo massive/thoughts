@@ -1,5 +1,6 @@
 import type { Meeting } from "./calendar.js";
-import type { MeetingSuggestions } from "./suggestions.js";
+import type { JiraTask } from "./jira.js";
+import type { MeetingSuggestions, TaskSuggestions } from "./suggestions.js";
 
 function formatTime(isoString: string): string {
   const date = new Date(isoString);
@@ -35,15 +36,75 @@ function formatLocation(location: string | undefined): string {
   return location;
 }
 
+function formatDueDate(dueDateStr: string): string {
+  const dueDate = new Date(dueDateStr);
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+  dueDate.setHours(0, 0, 0, 0);
+
+  const diffDays = Math.ceil(
+    (dueDate.getTime() - today.getTime()) / (1000 * 60 * 60 * 24)
+  );
+
+  const dateFormatted = dueDate.toLocaleDateString("en-US", {
+    month: "long",
+    day: "numeric",
+    year: "numeric",
+  });
+
+  if (diffDays === 0) return `${dateFormatted} (today)`;
+  if (diffDays === 1) return `${dateFormatted} (tomorrow)`;
+  return `${dateFormatted} (${diffDays} days)`;
+}
+
+function renderTasks(
+  tasks: JiraTask[],
+  suggestions: TaskSuggestions[]
+): string {
+  if (tasks.length === 0) {
+    return "";
+  }
+
+  const suggestionsMap = new Map<string, TaskSuggestions>();
+  for (const s of suggestions) {
+    suggestionsMap.set(s.taskKey, s);
+  }
+
+  let markdown = `## Upcoming Jira Tasks\n\n`;
+  markdown += `You have **${tasks.length} task${tasks.length === 1 ? "" : "s"}** with deadlines in the next 3 days.\n\n`;
+
+  for (const task of tasks) {
+    markdown += `### ${task.key}: ${task.summary}\n\n`;
+    markdown += `**Due:** ${formatDueDate(task.dueDate)}\n`;
+    markdown += `**Status:** ${task.status} | **Priority:** ${task.priority}\n`;
+    markdown += `**Link:** ${task.url}\n\n`;
+
+    const taskSuggestions = suggestionsMap.get(task.key);
+    if (taskSuggestions?.suggestions?.length) {
+      markdown += `**Prep:**\n`;
+      for (const suggestion of taskSuggestions.suggestions) {
+        markdown += `- ${suggestion}\n`;
+      }
+      markdown += `\n`;
+    }
+
+    markdown += `---\n\n`;
+  }
+
+  return markdown;
+}
+
 export function renderReport(
   meetings: Meeting[],
-  suggestions: MeetingSuggestions[]
+  meetingSuggestions: MeetingSuggestions[],
+  tasks: JiraTask[] = [],
+  taskSuggestions: TaskSuggestions[] = []
 ): string {
   const today = new Date();
   const dateStr = formatDate(today);
 
   const suggestionsMap = new Map<string, MeetingSuggestions>();
-  for (const s of suggestions) {
+  for (const s of meetingSuggestions) {
     suggestionsMap.set(s.meetingId, s);
   }
 
@@ -98,6 +159,8 @@ export function renderReport(
       markdown += `---\n\n`;
     }
   }
+
+  markdown += renderTasks(tasks, taskSuggestions);
 
   markdown += `*Generated at ${today.toLocaleTimeString("en-US", { hour: "2-digit", minute: "2-digit", hour12: false })}*\n`;
 
