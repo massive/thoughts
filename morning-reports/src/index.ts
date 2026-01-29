@@ -1,9 +1,10 @@
 import { fetchTodaysMeetings } from "./calendar.js";
 import { filterMeetingsNeedingPrep } from "./filter.js";
-import { generatePrepSuggestions } from "./suggestions.js";
+import { generatePrepSuggestions, generateTaskSuggestions } from "./suggestions.js";
 import { renderReport } from "./render.js";
 import { openInObsidian } from "./open.js";
 import { loadExpertise } from "./expertise.js";
+import { fetchUpcomingTasks } from "./jira.js";
 import { writeFile, mkdir } from "node:fs/promises";
 import { join, dirname } from "node:path";
 
@@ -29,6 +30,11 @@ async function main() {
   const allMeetings = await fetchTodaysMeetings();
   console.log(`Found ${allMeetings.length} total event(s)`);
 
+  // Step 2b: Fetch Jira tasks with upcoming deadlines
+  console.log("Fetching Jira tasks with upcoming deadlines...");
+  const tasks = await fetchUpcomingTasks();
+  console.log(`Found ${tasks.length} task(s) with deadlines in the next 3 days`);
+
   // Step 3: Filter to work meetings that need preparation
   console.log("Filtering meetings that need preparation...");
   const workMeetings = await filterMeetingsNeedingPrep(allMeetings);
@@ -41,9 +47,14 @@ async function main() {
   const suggestions = await generatePrepSuggestions(workMeetings, expertise);
   console.log(`Generated suggestions for ${suggestions.length} meeting(s)`);
 
+  // Step 4b: Generate suggestions for Jira tasks
+  console.log("Generating task suggestions...");
+  const taskSuggestions = await generateTaskSuggestions(tasks, expertise);
+  console.log(`Generated suggestions for ${taskSuggestions.length} task(s)`);
+
   // Step 5: Render the markdown report
   console.log("Rendering report...");
-  const report = renderReport(workMeetings, suggestions);
+  const report = renderReport(workMeetings, suggestions, tasks, taskSuggestions);
 
   // Step 6: Write to reports directory
   await mkdir(REPORTS_DIR, { recursive: true });
